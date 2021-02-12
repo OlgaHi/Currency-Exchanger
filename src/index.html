@@ -7,6 +7,11 @@
   <div class="container">
     <h2>Currency Exchanger</h2>
     <form id="exchanger">
+      <div class="form-group col-md-4">
+        <label for="age">Please enter amount here:</label>
+        <input id="amount" class="form-control" type="number">
+      </div>
+      <br>
       <div class="col-md-4">
         <select class="form-control" id="currency">
           <option>- Select currency -</option>
@@ -18,10 +23,6 @@
         </select>
       </div>
       <br>
-      <div class="form-group col-md-4">
-        <label for="age">Please enter amount here:</label>
-        <input id="amount" class="form-control" type="number">
-      </div>
       <button class="btn btn-dark">Get exchange</button>
     </form>
     <div id="result">
