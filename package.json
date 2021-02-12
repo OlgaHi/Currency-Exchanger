@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "currencyexchanger",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
@@ -11,12 +11,15 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["html","text"]
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
   },
   "keywords": [],
   "author": "Olha Hizhytska",
   "license": "MIT",
-  "description": "Template Enviroment",
+  "description": "",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",

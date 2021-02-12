@@ -35,7 +35,6 @@
 * Modify title on line 2 of package.json
 * Modify description on line 19 of package.json
 * Modify title on line 2 if package-lock.json
-* Run ```npm init -y```
 * Run ```npm install```
 * Verify install works by running ```npm run test``` and ```npm run build```
 
