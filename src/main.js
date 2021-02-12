@@ -2,5 +2,5 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import CurrencyExchange from './js/blank.js';
+//import CurrencyExchange from './js/blank.js';
 
