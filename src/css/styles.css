@@ -1,6 +1,13 @@
-/* .form#exchanger {
-  width: 300px;
-  height:150px;
-  margin: 0px auto;
-  border: 2px solid black;
-} */
+body {
+  padding: 10%;
+  text-align: center;
+  background-image: url('../assets/background_currency.jpg');
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+  color: rgb(27, 6, 85);
+  
+}
+
+
