@@ -7,6 +7,10 @@ import CurrencyExchange from './js/currencyExchange.js';
 function clearFields() {
   $("#currency").val("");
   $("#amount").val("");
+  $('#currency_not_selected').text("");
+  $('#wrong_number').text("");
+  $("#result").text("");
+
 }
 
 
@@ -30,11 +34,13 @@ $(document).ready(function() {
     let selectedCurrency = $("#currency option:selected").val();
     let number = parseInt($("#amount").val());
     clearFields();
-    if (number > 0) {
+    if (number > 0 & selectedCurrency !== '- Select currency -') {
       CurrencyExchange.getExchange()
         .then(function(response) {
           displayResult(response, selectedCurrency, number);
         });
+    } else if(selectedCurrency === '- Select currency -') {
+      $('#currency_not_selected').text("Please select available currency");
     } else {
       $('#wrong_number').text("Please enter any number more than 0!");
     }
