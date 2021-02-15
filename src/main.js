@@ -4,6 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyExchange from './js/currencyExchange.js';
 
+function clearFields() {
+  $("#currency").val("");
+  $("#amount").val("");
+}
+
 
 function displayResult(response, selectedCurrency, number) {
   if (response.result === "success") {
@@ -11,7 +16,6 @@ function displayResult(response, selectedCurrency, number) {
     for (const [key, value] of rates) {
       if (key === selectedCurrency) {
         let result1 = (number * value).toFixed(2);
-        console.log(result1)
         $("#result").text(`${result1}`);
         break;
       }
@@ -25,11 +29,10 @@ $(document).ready(function() {
     event.preventDefault();
     let selectedCurrency = $("#currency option:selected").val();
     let number = parseInt($("#amount").val());
-    console.log(selectedCurrency)
+    clearFields();
     CurrencyExchange.getExchange()
       .then(function(response) {
-        displayResult(response, selectedCurrency, number)
-        console.log(response);
+        displayResult(response, selectedCurrency, number);
       });
   });
 });
