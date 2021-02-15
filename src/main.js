@@ -30,10 +30,14 @@ $(document).ready(function() {
     let selectedCurrency = $("#currency option:selected").val();
     let number = parseInt($("#amount").val());
     clearFields();
-    CurrencyExchange.getExchange()
-      .then(function(response) {
-        displayResult(response, selectedCurrency, number);
-      });
+    if (number > 0) {
+      CurrencyExchange.getExchange()
+        .then(function(response) {
+          displayResult(response, selectedCurrency, number);
+        });
+    } else {
+      $('#wrong_number').text("Please enter any number more than 0!");
+    }
   });
 });
 
