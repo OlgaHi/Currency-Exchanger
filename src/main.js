@@ -14,7 +14,6 @@ function clearFields() {
 
 }
 
-
 function displayResult(response, selectedCurrency, number) {
   if (response.result === "success") {
     const rates = Object.entries(response.conversion_rates);
